@@ -166,7 +166,7 @@ The other option is to use player's MMR.  Using MMR is required when creating te
 
 ### Being smart about choosing teams
 
-The "elegant" method of choosing teams can be broken down into the following steps:
+The "smarter" method of choosing teams can be broken down into the following steps:
 
 - Gather player names and MMR
 - Generate a list of all possible teams
@@ -177,3 +177,7 @@ The "elegant" method of choosing teams can be broken down into the following ste
   - Attempt to make more teams until all players have been placed on a team
 
 The code for this can be found in the file `../Python/Smarter_Even_Team_Maker.py`
+
+## Performance difference
+
+Test out the scripts yourself with different numbers of players.  On my local machine, when using the file `/data/halo_seeding_match.csv` with 16 players and teams of 4, I show about a 340x speedup when going from the brute force method to the "smarter" one.
