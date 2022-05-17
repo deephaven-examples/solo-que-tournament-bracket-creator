@@ -153,7 +153,4 @@ def main(team_size, seeding_csv_file):
     display_results(even_team_combinations, players, seeding_results)
 
 if __name__ == "__main__":
-    start = time.time()
     main(4, "/data/halo_seeding_match.csv")
-    end = time.time()
-    print(end - start)
