@@ -6,9 +6,8 @@ This repository contains content for creating evenly matched tournament brackets
 
 This repository is split up into a few different folders. The files in this base folder are used for starting up the application in Deephaven.
 
-- `Python`: Contains the two Python scripts that can be used to create a tournament brack for teams.
 - `Docs`: Contains further explanation of the math and other concepts required to understand the solutions.
-- `data`: Contains a seeding CSV file that can be used to test out the scripts.
+- `data`: Contains scripts and a CSV file.
 
 ## Usage
 
