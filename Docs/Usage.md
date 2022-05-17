@@ -5,7 +5,7 @@ These arguments are specified all the way at the bottom of the scripts.
 
 ## Brute force method
 
-The script `../Python/Brute_Force_Even_Team_Maker.py` requires three input arguments.
+The script `../data/notebooks/Brute_Force_Even_Team_Maker.py` requires three input arguments.
 They are as follows:
 
 - Total number of players (integer)
@@ -16,7 +16,7 @@ These arguments are specified on line 108 of the script.
 
 ## Smarter method
 
-The script `../Python/Smarter_Even_Team_Maker.py` requires two input arguments.
+The script `../data/notebooks/Smarter_Even_Team_Maker.py` requires two input arguments.
 They are as follows:
 
 - Team size (integer)
