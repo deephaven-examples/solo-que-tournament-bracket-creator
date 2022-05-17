@@ -14,4 +14,4 @@ This repository is split up into a few different folders. The files in this base
 
 This application is meant to be used to construct tournaments for team based games.
 The brackets consist of teams that are mathematically evenly matched.
-To use both of the scripts, refer to the file `/data/usage.md`.
+For guidance on how to use both of the scripts, refer to the file `/data/Usage.md`.
