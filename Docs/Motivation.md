@@ -65,13 +65,13 @@ $_{16}C_{4} = \frac{16!}{4!12!} = \frac{(16)(15)(14)(13)}{(4)(3)(2)} = 1820$
 There are 1820 possible teams of 4 from a pool of 16 players.  If the players are numbered 1 through 16, this set of all possible teams of 4 looks something like this in memory:
 
 ```python
-[[1, 2, 3, 4], 
- [1, 2, 3, 5], 
- [1, 2, 3, 6], 
+[(1, 2, 3, 4), 
+ (1, 2, 3, 5), 
+ (1, 2, 3, 6), 
  ..., 
- [11, 14, 15, 16]
- [12, 14, 15 ,16]
- [13, 14, 15, 16]]
+ (11, 14, 15, 16)
+ (12, 14, 15 ,16)
+ (13, 14, 15, 16)]
 ```
 
 This is straightforward.  Now consider the question of how many combinations of combinations can we create?  That's to say, how many different ways can we organize the 16 players into 4 teams of 4?
@@ -82,7 +82,7 @@ Given $n$ unique objects and $r$ groups, how many unique combinations of $r$ gro
 
 The answer is as follows:
 
-$_{n}CC_{r} = \frac{\prod_{k=1}^{n/r} \frac{(kr)!}{r!(kr - r)!}}{r!}$
+$_{n}CC_{r} = \frac{\prod_{k=1}^{n/r} \frac{(kr)!}{r!(kr - r)!}}{\lfloor n/r \rfloor !}$
 
 For 16 players and 4 teams, this looks like:
 
@@ -108,12 +108,13 @@ def calc_combinations(n, r):
     return factorial(n) / (factorial(r) * factorial(n - r))
 
 def calc_combinations_of_combinations(n, r):
-    m = n
+    m = math.floor(n / r)
+    k = n
     product = 1
-    while m > 0:
-        product *= calc_combinations(m, r)
-        m -= r
-    product /= factorial(r)
+    while k <= n:
+        product *= calc_combinations(k, r)
+        k += r
+    product /= factorial(m)
     return product
 ```
 
