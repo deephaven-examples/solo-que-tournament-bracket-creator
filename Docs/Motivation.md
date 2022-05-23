@@ -130,7 +130,7 @@ print(cc)
 
 ```shell
 635376
-4.363407645282884e+65 b
+5.0051539038228865e+53
 ```
 
 That is a ridiculous number of unique combinations of teams.  Obviously, that's a problem.  We cannot possibly hope to store all of those combinations, nor can we process that many.  Thus, for sufficiently sized tournaments, an efficient way to find evenly matched teams must be used.
