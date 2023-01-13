@@ -3,7 +3,6 @@ import itertools
 import time
 import sys
 
-
 # Function Definitions
 def assert_inputs(num_players, team_size):
     try:
@@ -91,7 +90,7 @@ def display_most_balanced_teams(most_balanced_teams, most_balanced_ratios, possi
         for j in range(0, len(most_balanced_teams[i])):
             pnum = most_balanced_teams[i][j]
             print('\t\tPlayer #' + str(pnum + 1) + ' ' + str(kills[pnum]) + ' kills, ' + str(deaths[pnum]) + ' deaths.')
-            print('\tOverall team K/D ratio: ' + str(most_balanced_ratios[i]) + '\n')
+        print('\tOverall team K/D ratio: ' + str(most_balanced_ratios[i]) + '\n')
 
 
 def main(num_players, team_size, seeding_csv):
@@ -105,4 +104,7 @@ def main(num_players, team_size, seeding_csv):
 
 
 if __name__ == '__main__':
-    main(16, 4, "/data/halo_seeding_match.csv")
+    start = time.time()
+    main(16, 4, "/data/csv/halo_seeding_match.csv")
+    end = time.time()
+    print(f"\nBrute force even team making took {end - start} seconds.")

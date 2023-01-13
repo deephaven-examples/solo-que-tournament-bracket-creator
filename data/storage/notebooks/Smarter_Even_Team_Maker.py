@@ -153,4 +153,7 @@ def main(team_size, seeding_csv_file):
     display_results(even_team_combinations, players, seeding_results)
 
 if __name__ == "__main__":
-    main(4, "/data/halo_seeding_match.csv")
+    start = time.time()
+    main(4, "/data/csv/halo_seeding_match.csv")
+    end = time.time()
+    print(f"\nSmarter even team making took {end - start} seconds.")
