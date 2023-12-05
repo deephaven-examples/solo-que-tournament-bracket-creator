@@ -31,3 +31,5 @@ NOTE: The seeding results are made up. I actually had real seeding results at on
 ## Notes
 
 There are two scripts that do basically the same team - split up a group of 16 players in to 4 teams of 4 that are evenly matched based on the results of a seeding match. The first, which splits the teams using a brute force technique, takes ~27 seconds to run on my Macbook Pro. The second, which splits teams using a more elegant solution, takes ~0.05 seconds on my Macbook pro. This is approximately a 540x speedup. For an explanation of each solution, which gives more insight into the reasons for the drastic speedup, see the `Docs` folder.
+
+The code in this repository is built for Deephaven Community Core v0.19.1. No guarantee of forwards or backwards compatibility is given.
